@@ -57,8 +57,12 @@ app.post('/batchcode',async(req,res)=>{
 })
 app.get('/batches',async (req,res)=>{
     try {
-        const batches=await Batch.findAll()
-        console.log(batches)
+        const batches=await Batch.findAll({
+            include:[Course,Center,Season]
+        })
+        
+        batches.forEach(b=>console.log(JSON.stringify(b)))
+
         res.render('batches',{batches})
 
     } catch (e) {
