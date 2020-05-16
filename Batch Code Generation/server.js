@@ -45,7 +45,7 @@ app.post('/batchcode',async(req,res)=>{
             year:req.body.year,
             courseId:req.body.course,
             centerId:req.body.center,
-            seasonid:req.body.season,
+            seasonId:req.body.season,
             start:Date.parse(req.body.start),
             end:Date.parse(req.body.end)
         })
