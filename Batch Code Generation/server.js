@@ -29,6 +29,10 @@ app.get('/batchcode',async (req,res)=>{
 app.post('/batchcode',async(req,res)=>{
     let batchcode=''
     batchcode+=req.body.course
+    console.log("**************")
+    console.log(req.body.course)
+    console.log("**************")
+    console.log("**************")
     batchcode+=req.body.center
     batchcode+=req.body.year.substr(2)
     batchcode+=req.body.season
